@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Program name: match
+# Author name:  Xinyi Liang
+# Date created: April 10, 2020
+# Date updated: April 10, 2020
+# Description:
+#    This script which searches for the pattern passed as the first parameter 
+#    in the file passed as the second parameter, and prints any lines that contain a match.
+#    If there are no matches, print the message "There was no match."
+
+if [ $# != 2 ]
+then 
+  echo "Error - [Usage]: match pattern filename" >&2
+elif [ ! -f $2 ]
+  then 
+   echo "Error - file name is not correct." >&2
+elif [[ $(grep "$1" $2 | wc -l ) == 0 ]]
+    then 
+     echo "There was no match"
+    else
+    grep "$1" $2
+fi
