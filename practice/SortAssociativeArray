@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# Program name: SortAssociativeArray
+# Author name:  Xinyi Liang
+# Date created: April 12, 2020
+# Date updated: April 12, 2020
+# Description:
+#    This script defines a associative array and then sort it 
+#    by its value.
+
+declare -A numbers
+numbers=([zero]=0 [one]=1 [two]=2 [three]=3 [four]=4 [five]=5 [six]=6 [seven]=7 [eight]=8)
+for digit in $(echo ${numbers[*]} | tr ' ' '\n' | sort)
+ do
+   for indexnum in $(echo ${!numbers[*]})
+    do 
+     if [[ $digit == ${numbers[$indexnum]} ]]
+     then
+       echo "element $indexnum is $digit"
+    fi
+    done
+done
