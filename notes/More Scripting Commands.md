@@ -148,10 +148,56 @@ $ echo #?
   $ echo "My var is $MyVar"
  My var is Outside script
  ```
- **Common Enviroment Variables:**
+ **Common Enviroment Variables:**  
  - `PS1`: primary prompt
  - `PWD`: current working dir
  - `OLDPWD`: previous working dir
  - `USER`: current user name
  - `env`: shows all environment variables
+ 
+ **Shell Arithmetic**  
+ `(( expression ))`, space inside is flexible.  
+ eg. ((x = (1 + 2) * 6)), x=$(( 8 + 9 ))
+ 
+ **Head Command**  
+`$ head -2 filename`: display first 2 lines of the file  
+`$ head -n 2 filename`: display first 2 lines of the file  
+`$ head -n -2 filename`: display from the first lines to the second last line of the file  
+ 
+ **tail Command**    
+`$ tail -2 filename`: display last 2 lines of the file  
+`$ tail -n 2 filename`: display last 2 lines of the file  
+`$ tail -n +2 filename`: display from the second lines to the end of the file  
+
+ **find Command**   
+`$ find . -name "f*"`: find any filename that starts with f, then list their pathname  
+`$ find . -size +100k`: find any file which size is greater than 100k  
+
+ **cut Command**   
+ `$ cut -f3 filename`: extract 3rd field from the file. tab is delimeter  
+ `$ cut -f6,7 filename`: extract 6th and 7th field  
+ `$ cut -f6-9,3 filename`: extract 3rd, 6th to 7th field  
+ `$ cut -c1-9 filename`: extract 1st character to 9th character  
+ `$ cut -d: -f2,8 filename`: extract 2nd, 8th field, re-define delimeter as ":"  
+ 
+ **sort command**  
+ `$sort filename`: display records in ascending order
+ `$sort -f filename`: ignore case
+ `$sort -k5 filename`: sort on 5th field, by default, delimeter is one space
+ `$sort -bk5 filename`: sort on 5th field, ignoring multiple spaces
+ `$sort -t: -k5 filename`: sort on 5th field, re-define delimeter as ":"   
+ `$sort -rk5 filename`: sort on 5th field, reverse(descending)  
+ `$sort -nk5 filename`: sort on 5th field, numeriacally  
+ `$sort -u filename`: sort, get rip off duplicate records  
+ 
+ **tr command**  
+ `tr "a-z" "A-Z" < filename`: change all letters from lower case to upper case
+ `tr -d 'a' < filename`: delete all 'a' letter from file records
+ 
+ **wc command**  
+ `wc -l filename`: count number of newlines in this file
+ `wc -w filename`: count number of words in this file
+
+ 
+ 
  
