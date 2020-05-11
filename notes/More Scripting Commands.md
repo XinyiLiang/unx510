@@ -181,22 +181,22 @@ $ echo #?
  `$ cut -d: -f2,8 filename`: extract 2nd, 8th field, re-define delimeter as ":"  
  
  **sort command**  
- `$sort filename`: display records in ascending order
- `$sort -f filename`: ignore case
- `$sort -k5 filename`: sort on 5th field, by default, delimeter is one space
- `$sort -bk5 filename`: sort on 5th field, ignoring multiple spaces
+ `$sort filename`: display records in ascending order  
+ `$sort -f filename`: ignore case  
+ `$sort -k5 filename`: sort on 5th field, by default, delimeter is one space  
+ `$sort -bk5 filename`: sort on 5th field, ignoring multiple spaces  
  `$sort -t: -k5 filename`: sort on 5th field, re-define delimeter as ":"   
  `$sort -rk5 filename`: sort on 5th field, reverse(descending)  
  `$sort -nk5 filename`: sort on 5th field, numeriacally  
  `$sort -u filename`: sort, get rip off duplicate records  
  
  **tr command**  
- `tr "a-z" "A-Z" < filename`: change all letters from lower case to upper case
- `tr -d 'a' < filename`: delete all 'a' letter from file records
+ `tr "a-z" "A-Z" < filename`: change all letters from lower case to upper case  
+ `tr -d 'a' < filename`: delete all 'a' letter from file records  
  
  **wc command**  
- `wc -l filename`: count number of newlines in this file
- `wc -w filename`: count number of words in this file
+ `wc -l filename`: count number of newlines in this file  
+ `wc -w filename`: count number of words in this file  
 
  
  
